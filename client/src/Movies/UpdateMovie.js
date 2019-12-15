@@ -7,7 +7,7 @@ export const UpdateMovie = props => {
     title: "",
     director: "",
     metascore: "",
-    stars: []
+    stars: ""
   });
   const id = props.match.params.id;
   useEffect(() => {
@@ -31,9 +31,13 @@ export const UpdateMovie = props => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    const trueMovie = {
+      ...movie,
+      stars: movie.stars.split(", ")
+    };
 
     axios
-      .put(`http://localhost:5000/api/movies/${movie.id}`, movie)
+      .put(`http://localhost:5000/api/movies/${movie.id}`, trueMovie)
       .then(res => {
         console.log(res.data);
         setMovie({});
