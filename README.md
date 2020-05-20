@@ -7,6 +7,7 @@
 - Run the server using `yarn start` or `node server.js`.
 - In a separate terminal cd into the `client` folder and run `yarn install` to download dependencies.
 - Still inside the `client` folder run `yarn start` to run the client application.
+  recre
 
 ### Part 1 - Updating A Movie:
 
